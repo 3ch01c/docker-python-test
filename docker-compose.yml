@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  python-test:
+    image: 3ch01c/python-test:3.9
+    build:
+      context: .
+      args:
+        http_proxy:
+        https_proxy:
+        no_proxy:
+    environment:
+      http_proxy:
+      https_proxy:
+      no_proxy:
+    volumes:
+      ./tests:/usr/src/app/tests
