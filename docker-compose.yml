@@ -13,4 +13,4 @@ services:
       https_proxy:
       no_proxy:
     volumes:
-      ./tests:/usr/src/app/tests
+      - ./tests:/usr/src/app/tests
