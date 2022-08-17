@@ -15,3 +15,4 @@ services:
     volumes:
       - ./tests:/usr/src/app/tests
       - ./pytest.ini:/usr/src/app/pytest.ini
+      - ./src:/usr/src/app/src
