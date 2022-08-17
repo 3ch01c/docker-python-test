@@ -1,2 +1,2 @@
 def test_it_works():
-  asser(1 == 1)
+  assert(1 == 1)

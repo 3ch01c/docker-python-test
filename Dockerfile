@@ -4,5 +4,6 @@ RUN pip install pytest
 
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["pytest", "."]
+CMD ["pytest", "-v", "tests"]
 VOLUME /usr/src/app/tests
+VOLUME /usr/src/app/pytest.ini
