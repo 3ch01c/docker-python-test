@@ -24,7 +24,7 @@ jobs:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         PYTHON_VERSION: ${{secrets.PYTHON_VERSION}}
-      run: docker build . --tag ${{secrets.DOCKER_USER}}/python-test:${{PYTHON_VERSION}}
+      run: docker build . --tag ${{secrets.DOCKER_USER}}/python-test:${{secrets.PYTHON_VERSION}}
     - name: docker push
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
