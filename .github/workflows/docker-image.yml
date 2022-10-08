@@ -18,15 +18,16 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        PYTHON_VERSION: ${{secrets.PYTHON_VERSION}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
+      environment: python3.9
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         PYTHON_VERSION: ${{secrets.PYTHON_VERSION}}
       run: docker build . --tag ${{secrets.DOCKER_USER}}/python-test:${{PYTHON_VERSION}}
     - name: docker push
+      environment: python3.9
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
